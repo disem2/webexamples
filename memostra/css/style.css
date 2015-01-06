@@ -1,0 +1,128 @@
+* {font-size: 100.01%;}
+html {font-size: 62.5%;}
+body{
+	margin: 0;
+	color: #000;
+	font: 1.8em Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background: #fff;
+}
+img{border-style: none;}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{text-decoration: underline;}
+input,
+textarea,
+select{
+	font: 100% arial,sans-serif;
+	vertical-align: middle;
+}
+form,fieldset{
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+header, footer, article, section, hgroup, nav, figure { display: block; }
+#wrapper{
+	margin: 0 auto;
+	padding: 28px 44px 0 43px;	
+	max-width: 1047px;
+}
+#header{
+
+}
+.header-top{
+	overflow: hidden;
+}
+.header-top .logo{
+	float: left;
+	margin: 0;
+	font-size: 0;
+	width: 289px;
+	height: 59px;
+	background: url(../images/logo.png) no-repeat;
+}
+.header-top .contact-us{
+	float: right;
+	margin-top: 15px;
+}
+.header-top .text, .header-top .email{
+	display: block;
+	text-align: right;
+	font-size: 0.928em;
+	font-style: italic;
+}
+.header-top .text{
+	font-weight: normal;
+	color: #858586;
+}
+.header-top .email{
+	color: #779956;
+}
+.header-nav{
+	margin-top: 29px;
+	background: #538bc5;
+}
+.header-nav:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+#nav{
+	font-size: 0;
+	float: left;
+	width: 880px;
+}
+#nav a{
+	display: inline-block;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 16px 0 13px;
+	color: #ffffff;
+}
+#nav a.active {
+	position: relative;
+	background: #375c84;
+}
+#nav a.active:after {
+	content: '';
+    position: absolute;
+    background: inherit;     
+	bottom: -4px;
+	left: 45%;
+    width: 8px; 
+	height: 8px;       
+    transform: rotate(45deg);
+}
+.header-nav .contact-icons{
+	display: inline-block;
+	width: 80px;
+	float: right;
+	font-size: 0;
+	vertical-align: middle;
+	list-style: none;
+	padding: 0;
+	text-align: right;
+	margin: 13px 0 0 0;
+}
+.header-nav .contact-icons li{
+	height: 22px;
+	border: 3px solid #94c5ec;
+	display: inline-block;
+	border-radius: 3px;
+	margin-right: 8px;
+}
+.header-nav .contact-icons li:hover{
+	border: 3px solid #2cda6a;
+}
+.header-nav .contact-icons .email{
+	width: 24px;
+	background: url(../images/email.png) no-repeat, #94c5ec;
+}
+.header-nav .contact-icons .fb{
+	margin-right: 14px;	
+	width: 22px;
+	background: url(../images/fb.png) no-repeat, #94c5ec;
+}

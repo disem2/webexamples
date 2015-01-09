@@ -2,58 +2,70 @@ scrollCards($('#start'), 'canvas');
 
 function scrollCards(button, holder){
 	var canvas = new fabric.Canvas(holder);
-	var cards = [
-		'images/r0.gif',
-		'images/r1.gif',
-		'images/r2.gif',
-		'images/r3.gif',
-		'images/r4.gif',
-		'images/r5.gif',
-		'images/r6.gif',
-		'images/r7.gif',
-		'images/r8.gif',
-		'images/r9.gif',
-		'images/r10.gif',
-		'images/r11.gif',
-		'images/r12.gif'
-	];
+	var cards = [];
 	var cardHeight = 100,
-	cardsQuantity = 20,
+	deck = 13,
+	time = 5, // Seconds	
+	speed = 3, // Cards per. second
 	canvasCapacity = 3,
+	cardsQuantity = time * speed - canvasCapacity,
 	startPosition = canvasCapacity - cardsQuantity - 1,
-	randomCards = getRandom(cards, cardsQuantity);
+	randomCards;
+
+	cards = getCards(deck);
+
+	randomCards = getRandom(cards, cardsQuantity);		
 
 	// Setting last cards
-	randomCards[0] = cards[0];
-	randomCards[1] = cards[0];
-	randomCards[2] = cards[12];
+	randomCards[0] = 'images/r1.gif';
+	randomCards[1] = 'images/r1.gif';
+	randomCards[2] = 'images/r12.gif';
 
 	$(randomCards).each(function(index){
 		fabric.Image.fromURL(randomCards[index], function(oImg){
-			canvas.add(oImg);
 			oImg.top = cardHeight * (index + startPosition);
-			canvas.renderAll();
+			oImg.selectable = false;
+			canvas.add(oImg);
 
 			$(button).on('click', function(){
 				oImg.animate('top', cardHeight * index, {
-					duration: 5000,
+					duration: time * 1000,
 					onChange: canvas.renderAll.bind(canvas)
 				})
 			})				
 		});
 	});
 
+	$(button).on('click', function() {
+
+	    canvas.on('top', 100, {
+	        onChange: canvas.renderAll.bind(canvas)
+	    });
+	});
+
+	function getCards(quantity){
+
+		var index = 0,
+		link,
+		result = [];
+		while(true){
+			link = 'images/r' + index + '.gif';
+			result[index] = link;
+			index++;	
+
+			if(index == quantity) {
+				return result;
+			}
+		}
+		
+	}
+
 	function getRandom(elements, number){
-		var result = [],
-		i, max = elements.length;
+		var result = [];
 
-		Array.prototype.random = function (length) {
-		       return this[Math.floor((Math.random()*length))];
-		 }
-
-		for (i = cardsQuantity; i > 0; i--) (function(a){
-			result[a] = cards.random(cards.length);			
-		})(i);
+		$(cards).each(function(index){
+			result[index] = cards[Math.floor(cards.length * Math.random())];
+		});
 
 		return result;
 	}

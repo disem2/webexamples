@@ -5,7 +5,7 @@
     <title>Upprize</title>
 	<link href="css/style.css" rel="stylesheet"/>	
 	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
   </head>
   <body>
@@ -34,18 +34,14 @@
 					</div>
 					<div class="header-nav">
 						<h1 class="logo">Upprize</h1>
-						<div class="nav-wrap1">
-							<div class="nav-wrap2">
-								<nav id="nav">
-									<a href="#">Главная</a>
-									<a href="#" class="active">Все конкурсы</a>			
-									<a href="#">Призы</a>
-									<a href="#">Архив</a>
-									<a href="#">Участники</a>			
-									<a href="#">Победители</a>
-								</nav>
-							</div>	
-						</div>			
+						<nav id="nav">
+							<a href="#" class="active">Главная</a>
+							<a href="#">Все конкурсы</a>			
+							<a href="#">Призы</a>
+							<a href="#">Архив</a>
+							<a href="#">Участники</a>			
+							<a href="#">Победители</a>
+						</nav>
 					</div>
 				</header>
 				<div class="container">
@@ -130,21 +126,19 @@
 							<div id="tabs">
 								<ul class="tabset">
 									<li class="new">							
-										<a href="#tabs-1">Новые</a>
+										<a href="#tabs-1" class="tabset-link active">Новые</a>
 									</li>
 									<li class="popular active">							
-										<a href="#tabs-2">Популярные</a>							
+										<a href="#tabs-2" class="tabset-link">Популярные</a>							
 									</li>
 									<li class="special">
-										<a href="#tabs-3">Особенные</a>
+										<a href="#tabs-3" class="tabset-link">Особенные</a>
 									</li>
 									<li class="most-active">
-										<a href="#tabs-4">Самые активные</a>
+										<a href="#tabs-4" class="tabset-link">Самые активные</a>
 									</li>
 								</ul>
-								<div class="tab" id="tabs-1">
-								</div>
-								<div class="tab" id="tabs-2">					
+								<div class="tab" id="tabs-1">					
 									<section class="tab-content">
 										<div class="work">
 											<img src="images/work.jpg" alt=""/>
@@ -172,6 +166,8 @@
 										</div>
 									</section>
 								</div>	
+								<div class="tab" id="tabs-2">
+								</div>
 								<div class="tab" id="tabs-3">
 								</div>
 								<div class="tab" id="tabs-4">

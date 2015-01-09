@@ -164,22 +164,14 @@ header, footer, article, section, hgroup, nav, figure { display: block; }
 	background: url(../images/logo.png) no-repeat;
 	float: left;
 }
-.nav-wrap1{
-	margin: 29px 0 0 33px;
-	float: left;
-	padding-left: 14px;
-	background: url(../images/nav-bg-l.png) no-repeat;
-}
-.nav-wrap2{
-	float: right;
-	padding-right: 14px;
-	background: url(../images/nav-bg-r.png) 100% no-repeat;
-}
 #nav {
+	float: left;
+	margin: 29px 0 0 33px;
 	font-size: 0;
 	background: #1199e5;
 	background: url(../images/nav-bg-m.png) repeat-x;
-	width: 654px;
+	width: 682px;
+	border-radius: 16px;
 }
 #nav a {
 	font-size: 20px;
@@ -600,12 +592,12 @@ header, footer, article, section, hgroup, nav, figure { display: block; }
 	text-shadow: 1px 1px #145680;
 	outline-color: transparent;
 }
-.works .tabset .active a{
+.works .tabset a.active{
 	position: relative;
 	background: linear-gradient(to top, #0066b8, #0091ff);
 	border-radius: 4px;
 }
-.works .tabset .active a:after{	
+.works .tabset a.active:after{	
     content: '';
     position: absolute;
     background: #0066b8;     

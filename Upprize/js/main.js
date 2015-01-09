@@ -1,13 +1,20 @@
 $(function (){
-	setActive('#nav a');
-	setActive('.tabset li');
 	autoScaling('#nav a', '#nav');
-	$("#tabs").tabs();
+	setActive('#nav a');
+	setActive('.tabset-link', $('.tabset-link').length);
+	$("#tabs").tabs( { selected: tabs-2 } );
 	slideGallery($('#gallery'), $('.winner'), 48, '#l-arrow', '#r-arrow');
 	
-	function setActive(list) {	
-		$(list).each(function(e){
-			$(this).click(function(index){		
+	function setActive(list, length) {	
+		var listLength = length || list.length;
+		$(list).each(function(index){		
+				if(index === 0) {
+					$(this).css('border-radius', '16px 4px 4px 16px');
+				}else if(index === listLength - 1){
+					$(this).css('border-radius', '4px 16px 16px 4px');
+				}	
+			$(this).click(function(e){
+				e.preventDefault();	
 				$(list).removeClass("active");
 				$(this).addClass("active");
 			});	
@@ -17,9 +24,11 @@ $(function (){
 	function autoScaling(navigation, container) {
 		var containerWidth = $(container).width();
 		var textWidth = getTextWidth(navigation);
-		var paddings = (containerWidth - textWidth) / $(navigation).length / 2;
+		var paddings = Math.floor((containerWidth - textWidth) / $(navigation).length / 2);
+		var lastPadding = (((containerWidth - textWidth) / $(navigation).length / 2) % paddings) * $(navigation).length;
 		
 		$(navigation).css('padding-left', paddings).css('padding-right', paddings);
+		$(navigation).last().css('padding-right', (lastPadding * 2 + paddings));
 		
 		
 		function getTextWidth(list) {			

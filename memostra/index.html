@@ -6,11 +6,10 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>Memostra</title>
 	    
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+	   	<link href="css/style.css" rel="stylesheet">
 
 		<script src="js/jquery-1.11.2.min.js"></script>	  
-	    <script src="js/bootstrap.min.js"></script>	 
+	    <script src="js/my-functions.js"></script>
 	    <script src="js/main.js"></script>	   
   	</head>
   	<body>	
@@ -39,6 +38,30 @@
 					</ul>
 				</div>
 			</header>
+			<div id="main">
+				<div class="banner">
+					<div class="banner-info">
+						<h2>Welcom to Mostra!</h2>
+						<span>Quality Products - Great Prices!</span>
+						<button class="check">Check It Out</button>
+					</div>
+				</div>
+				<div class="content">
+					<div class="filter-search">						
+						<ul class="filter-gender">
+							<li class="active"><a href="#" id="gender-all">All Categories</a></li>
+							<li><a href="#" id="gender-men">Men</a></li>
+							<li><a href="#" id="gender-women">Women</a></li>
+						</ul>	
+						<form class="search" action="#">
+							<fieldset>
+								<div class="input-border"><input type="text" name="search-text" placeholder="Browse Products"/></div>
+								<input type="submit" value="Search"/>
+							</fieldset>
+						</form>					
+					</div>
+				</div>
+			</div>
 		</div>	  	    
   	</body>
 </html>

@@ -28,7 +28,7 @@ header, footer, article, section, hgroup, nav, figure { display: block; }
 #wrapper{
 	margin: 0 auto;
 	padding: 28px 44px 0 43px;	
-	max-width: 1047px;
+	max-width: 960px;
 }
 #header{
 
@@ -108,7 +108,7 @@ header, footer, article, section, hgroup, nav, figure { display: block; }
 	margin: 13px 0 0 0;
 }
 .header-nav .contact-icons li{
-	height: 22px;
+	height: 16px;
 	border: 3px solid #94c5ec;
 	display: inline-block;
 	border-radius: 3px;
@@ -118,11 +118,106 @@ header, footer, article, section, hgroup, nav, figure { display: block; }
 	border: 3px solid #2cda6a;
 }
 .header-nav .contact-icons .email{
-	width: 24px;
+	width: 18px;
 	background: url(../images/email.png) no-repeat, #94c5ec;
 }
 .header-nav .contact-icons .fb{
 	margin-right: 14px;	
-	width: 22px;
+	width: 16px;
 	background: url(../images/fb.png) no-repeat, #94c5ec;
+}
+#main .banner{
+	margin-top: 20px;
+	height: 146px;
+	padding: 24px 26px 0 0;
+	background: url(../images/banner-bg.png) no-repeat;
+}
+.banner-info{
+	float: right;
+	height: 100%;
+	text-align: right;
+	font-weight: bold;
+	position: relative;
+}
+.banner-info h2{
+	display: block;
+	margin: 0;
+	font-size: 2em;
+	line-height: 1em;
+	color: #688fb1;
+	font-weight: bold;
+}
+.banner-info span{
+	display: block;
+	margin-bottom: 13px;
+	line-height: 1em;
+	color: #91a9bd;
+}
+.banner-info .check{
+	font-size: 0.889em;
+	line-height: 1em;
+	padding: 0.75em 1.438em 0.875em 1.375em;
+	border: none;
+	color: #ffffff;
+	background: #d8812e;
+	position: absolute;
+	bottom: 25px;
+	right: 0;
+}
+.filter-search{
+	margin-top: 20px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted #b6c6dd;
+}
+.filter-gender{
+	float: left;
+	list-style: none;
+	padding: 0;	
+	margin: 0;
+	letter-spacing: -0.36em;
+}
+.filter-gender li{
+	display: inline-block;
+	letter-spacing: normal;
+}
+.filter-gender li a{
+	display: inline-block;
+	padding: 11px 15px 14px 15px;
+	margin-left: 5px;
+	background: #ececec;
+	border: 1px solid #dddddc;
+	color: #a0a0a0;
+}
+.filter-gender li:first-child a{
+	margin-left: 0;
+}
+.filter-gender li a:hover, .filter-gender li.active a{
+	color: #3b638f;
+	background: #e2ecf4;
+}
+.filter-search .search{
+	float: right;
+}
+.filter-search .search input[name=search-text]{
+	padding: 9px 9px 11px 9px;
+	width: 212px;
+	border: 3px solid #cbddbb;
+	font-family: Verdana Regular,arial,sans-serif;
+	font-size: 0.667em;
+	line-height: 1em;
+	color: #676767;
+}
+.filter-search .search .input-border{
+	border: 1px solid #aec697;
+	display: inline-block;
+}
+.filter-search .search input[type=submit]{
+	font-size: 0.889em;
+	line-height: 1em;
+	font-weight: bold;
+	color: #6c7e54;
+	background: #cbddbb;
+	padding: 11px 12px 13px 13px;
+	border: 1px solid #aec697;
 }

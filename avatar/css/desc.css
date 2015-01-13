@@ -1,0 +1,8 @@
+
+
+@media screen and (max-width: 800px;) and (min-width: 480px;){
+
+	#header .header-social{	
+	display: none;
+}
+}
